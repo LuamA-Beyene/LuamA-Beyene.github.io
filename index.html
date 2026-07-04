@@ -3,49 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luam Alem Beyene| AI & 3D Deep Learning</title>
+  <title>Luam | AI & 3D Deep Learning</title>
 
   <style>
-    body {
+    :root {
+      --background: #fff7fb;
+      --foreground: #2b2b2b;
+      --muted: #6b5b63;
+      --accent: #e89bb7;
+      --accent-dark: #d97aa5;
+      --card: rgba(255, 255, 255, 0.7);
+      --border: rgba(232, 155, 183, 0.25);
+    }
+
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(135deg, #fff7fb 0%, #fff0f6 50%, #ffe4ef 100%);
+      color: var(--foreground);
       line-height: 1.6;
     }
 
     header {
-      background: #111827;
-      padding: 60px 20px;
       text-align: center;
+      padding: 80px 20px 40px;
     }
 
     header h1 {
-      margin: 0;
       font-size: 42px;
-      color: #38bdf8;
+      color: var(--accent);
     }
 
     header p {
+      color: var(--muted);
       font-size: 18px;
-      color: #cbd5e1;
+      margin-top: 10px;
     }
 
     nav {
       text-align: center;
       padding: 15px;
-      background: #1f2937;
     }
 
     nav a {
-      color: #e2e8f0;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      color: var(--foreground);
+      font-weight: 600;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: var(--accent);
     }
 
     section {
@@ -55,38 +68,47 @@
     }
 
     h2 {
-      color: #38bdf8;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 10px;
+      color: var(--accent);
+      margin-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
     }
 
     .card {
-      background: #1e293b;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 20px;
       margin: 15px 0;
-      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      background: var(--accent);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: #111827;
-      color: #94a3b8;
+      padding: 30px;
+      color: var(--muted);
+      font-size: 14px;
       margin-top: 40px;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #38bdf8;
-      color: #0f172a;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-
-    a.button:hover {
-      background: #0ea5e9;
     }
   </style>
 </head>
@@ -95,7 +117,7 @@
 
 <header>
   <h1>Luam Alem Beyene</h1>
-  <p>AI Researcher | Deep Learning | 3D Point Clouds</p>
+  <p>AI Researcher | 3D Deep Learning | Point Cloud Classification</p>
 </header>
 
 <nav>
@@ -107,23 +129,26 @@
 
 <section id="about">
   <h2>About Me</h2>
-  <p>
-    I am a computer science enthusiast focusing on deep learning for 3D data,
-    including point cloud classification and geometric neural networks.
-  </p>
+  <div class="card">
+    <p>
+      I am a computer science enthusiast focused on deep learning for 3D data,
+      especially point cloud classification and geometric neural networks.
+      I work with architectures such as PointNet++ and DGCNN.
+    </p>
+  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
 
   <div class="card">
-    <h3>PointNet++ vs DGCNN</h3>
-    <p>Comparative study of deep learning architectures for point cloud classification.</p>
+    <h3>PointNet++ vs DGCNN Benchmark</h3>
+    <p>Comparison of deep learning architectures for 3D point cloud classification on ModelNet40 and ScanObjectNN.</p>
   </div>
 
   <div class="card">
-    <h3>ScanObjectNN Experiments</h3>
-    <p>Robustness evaluation of models on real-world noisy 3D datasets.</p>
+    <h3>ScanObjectNN Robustness Study</h3>
+    <p>Evaluating model robustness on real-world noisy 3D object datasets.</p>
   </div>
 </section>
 
@@ -134,8 +159,9 @@
     <ul>
       <li>3D Deep Learning</li>
       <li>Point Cloud Classification</li>
-      <li>Graph Neural Networks</li>
+      <li>Graph Neural Networks (DGCNN)</li>
       <li>Neural Architecture Evaluation</li>
+      <li>Robustness in Deep Learning Systems</li>
     </ul>
   </div>
 </section>
@@ -144,7 +170,7 @@
   <h2>Contact</h2>
 
   <div class="card">
-    <p>Email: myemailisluna@example.com</p>
+    <p>Email: your.email@example.com</p>
     <p>GitHub: https://github.com/yourusername</p>
 
     <a class="button" href="mailto:your.email@example.com">Send Email</a>
